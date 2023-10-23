@@ -1,0 +1,164 @@
+ul {
+  margin: 0;
+  padding: 0 0 0 1.5em;
+}
+
+li {
+  margin: 1.5em 0;
+  padding: 0;
+}
+
+b { /* used for event dates/times */
+  margin-right: 3px;
+}
+
+/* Calendar */
+.app-main {
+  flex-grow: 1;
+  padding: 9em 3em;
+}
+
+.fc { /* the calendar root */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
+  margin-bottom: 4em;
+}
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: rgba(142, 150, 143, 0.08);
+}
+/* 개별 날짜 박스*/
+.fc-daygrid-event { /*일정 추가시 생성되는 일정 박스*/ 
+  border-radius: 12px;
+  padding: 5px 10px;
+  font-size: 11px;
+  position: relative;
+  white-space: nowrap;
+  background: #27831121;
+  margin-bottom: 4px;
+}
+
+.fc-h-event .fc-event-main { /* 일정 추가 글씨 색*/ 
+  color: #0b0000ed;
+}
+.fc-h-event {/* 일정 박스의 보더라인 */ 
+  border: 1px solid #4552431c;
+  display: block;
+}
+.fc-direction-ltr .fc-daygrid-event.fc-event-end, 
+.fc-direction-rtl .fc-daygrid-event.fc-event-start { /* 일정 박스 마진*/ 
+  margin-right: 6px;
+}
+.fc-direction-ltr .fc-daygrid-event.fc-event-start, 
+.fc-direction-rtl .fc-daygrid-event.fc-event-end { /* 일정 박스 마진*/ 
+  margin-left: 6px;
+}
+/* 상단에 왼쪽, 오른쪽 버튼 컬러 */
+.fc .fc-button-primary {
+  background-color: #29570b6e;
+  border-color: #737f7000;
+  color: var(--fc-button-text-color);
+}
+.fc-direction-ltr .fc-button-group > .fc-button:not(:first-child) { /*버튼 사이사이 */
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  margin-left: 1px;
+}
+.fc .fc-button {
+  border-radius: 1em;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.4em 1em;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.fc .fc-button-primary:hover {
+  background-color: #8b8e9024;
+  color: #0e0707;
+  border: 1px solid #8b8e9042;
+}
+.fc .fc-button-primary:disabled { /* today 버튼 */
+  background-color: #0b0a0a;
+  border-color: #0b0a0a;
+  color: var(--fc-button-text-color);
+  letter-spacing: 2px;
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+.fc .fc-button-primary:not(:disabled).fc-button-active, 
+.fc .fc-button-primary:not(:disabled):active { /* month 버튼 */
+  background-color: #454a4f;
+  border-color: #151e2700;
+  color: var(--fc-button-text-color);
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+.fc .fc-daygrid-more-link { /* 2more */
+  border-radius: 3px;
+  cursor: pointer;
+  line-height: 1;
+  margin-top: 1px;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 5px;
+  position: relative;
+  white-space: nowrap;
+  z-index: 4;
+  letter-spacing: 1px;
+  font-size: 11px;
+}
+
+
+/* week */
+.fc .fc-daygrid-day-frame { /* allday 박스 */
+  min-height: 100%;
+  position: relative;
+}
+.fc-v-event .fc-event-main { /* 일정 추가시 박스 */
+  color: #240505;
+  height: 100%;
+}
+.fc-timegrid-event .fc-event-main { /* 일정 박스 내부 간격 */
+padding: 3px 1px 0px 10px;
+}
+.fc-timegrid-event, .fc-timegrid-more-link { /*글자 크기, 보더라인 */
+  border-radius: 10px;
+  font-size: 9px;
+  background: #578a4e21;
+  background: #578a4e21;
+  border: 1px solid #a7b2a521;
+  margin: 0px 3px;
+  height: 21px;
+}
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: rgba(142, 150, 143, 0.08);
+}
+.fc .fc-daygrid-day-events { /*일정 박스 내 상위 마진*/
+  margin-top: 7px;
+}
+
+.fc .fc-timegrid-slot { /*week 칸 간격 */
+  border-bottom: 0px;
+  height: 2em;
+}
+
+.fc-media-screen .fc-timegrid-col-bg, .fc-media-screen .fc-timegrid-col-events, .fc-media-screen .fc-timegrid-now-indicator-container {
+  left: 0px;
+  position: absolute;
+  right: 0px;
+  top: 3px;
+}
+
+
+:root {
+  --fc-today-bg-color: rgba(202, 183, 88, 0.14); /* 오늘의 색 */
+  --fc-highlight-color: rgb(171 210 165 / 21%); /* 일정 추가 선택시 창의 색*/
+}

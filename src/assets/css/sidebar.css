@@ -1,0 +1,35 @@
+#sideBar {
+    background-color: rgb(201, 223, 245);
+    float: left;
+    padding: 20px;
+    width: 130px;
+    height: calc(100vh);
+}
+
+#sideBar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sideBar a {
+    font-style: normal;  /* 'none' 대신 'normal'을 사용해야 합니다. */
+    text-decoration: none;
+    color: black;
+}
+
+.create-project{
+    display: flex;
+    gap: 3px;
+}
+
+.project-list{
+    margin-top: 10px;
+    display: flex;
+    gap: 5px;
+}
+.project-list img, .create-project img{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+

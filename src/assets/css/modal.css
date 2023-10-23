@@ -1,0 +1,109 @@
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+  }
+  .modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 1ch;
+    width: 1000px;
+    height: 600px;
+  }
+  .close {
+    cursor: pointer;
+    float: right;
+    font-size: 28px;
+    margin: 0 0 10px 10px;
+  }
+  
+  .m-container{
+      display: flex;
+      gap: 40px;
+  }
+  
+  .todo, .todo-detail{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+  
+  .m-left{
+      width: 55%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+  }
+  .m-right{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    
+}
+
+.todo input{
+    height: 30px;
+    border-radius: 1ch;
+}
+.todo input:focus{
+    border-color: rgb(94, 94, 214);
+    border: none;
+}
+
+
+
+.todo-detail input{
+    height: 70px;
+    border-radius: 1ch;
+}
+
+.todo-detail button{
+    width: 65px;
+    padding: 7px;
+    place-self: flex-end;
+    background-color: rgb(39, 93, 194);
+    color: #ffffff;
+    border: none;
+    border-radius: 1ch;
+}
+
+.todo-detail button:hover{
+    cursor: pointer;
+}
+
+.status-detail{
+    border: 1px solid gray;
+    border-radius: 1ch;
+
+}
+
+.status-table{
+    width: 100%;
+    padding: 10px;
+}
+
+
+.status-table th {
+    text-align: left;
+    padding: 10px;
+}
+
+.s-header{
+    border-bottom: 1px solid gray;
+    padding: 10px;
+}
+
+.date-picker{
+    border: none;
+    width: 100%;
+    height: 40px;
+}
+
